@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CSCI120 Web Project</title>
+  <link href="https://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+ body{
+	font-family: 'Vollkorn', serif;
+	background-color:#FFFFF0
+}
+/*Heading and Navigational List*/
+header h1{
+	background: url(images/marble3.jpg);
+	background-repeat: repeat;
+	color: #bebebe;
+	font-size:50px;
+	padding: 25px 15px 25px 15px;
+	margin-bottom:0px;
+	margin-top:0px;
+	margin-left:0px;
+	margin-right:0px
+}
+nav{
+    overflow: hidden;
+    background-color: #ffe4e1;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 100px;
+	margin-left:20px;
+    text-decoration: none;
+}
+a:hover {
+    background-color: #d8bfd8;
+}
+/*Main*/
+h2{
+	color:#ffe4e1;
+}
+h3{
+	color:#D8BFD8;
+	margin-bottom:0px;
+	padding-bottom:30px;
+	margin-left:0px;
+	margin-right:0px;
+	font-size:30px
+}
+/*Count Down*/
+article{
+	text-align:center;
+	border:dotted;
+	border-width: thick;
+	border-color:#D8BFD8;
+	margin-top:10px;
+	padding-top:10px;
+	margin-left:300px;
+	margin-right:300px;
+}
+p{
+	color:#bebebe;
+	font-size:20px
+}
+figure{
+	margin-top:0px;
+	padding-top:0px;
+	text-align: center;
+	color:#d8bfd8;
+	font-weight:bold;
+	font-style:italic;
+}
+figcaption{
+	color:#d8bfd8;
+	font-style: italic;
+}
+dl{
+	margin-top:0px;
+	padding-top:0px
+}
+dt{
+	font-style:italic;
+	color:#d8bfd8;
+	font-weight:bold;
+	text-decoration:underline
+}
+dd{
+	color:#bebebe;
+	font-weight:bold
+}
+figure{
+	margin-left:70px;
+	margin-right: 70px
+}
+footer{
+    background-color: #ffe4e1;
+	margin-top:30px;
+	padding:20px
+}
+#calculator{
+	color:#bebebe;
+	border:solid;
+	border-color:#ffe4e1;
+	border-width:thin;
+	padding-top:30px;
+    border-radius: 25px
+}
+  </style>
+</head>
+<body>
+<nav>
+<div>
+<header>
+     <h1><a href="images/logo.png"><img src="images/logo.png" alt="logo"></a>Semester Project</a></h1>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+		<li><a href="http://ccuresearch.coastal.edu/bllee1">Home</a></li>
+		<li><a href="http://ccuresearch.coastal.edu/bllee1/assignments.html">Assignments</a></li>
+   		<li><a href="http://ccuresearch.coastal.edu/bllee1/academics.html">Academics</a></li>
+   		<li><a href="http://ccuresearch.coastal.edu/bllee1/cards.html">Card Page</a></li>
+		<li><a href="http://ccuresearch.coastal.edu/bllee1/contact.html">Contact Me</a></li>
+      </ul>
+    </div>
+</nav>
+</header>
+<div>
+<article>
+<p><underline>Count Down To New Years!</underline></p>
+<p id="demo"></p>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 1, 2018 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+    
+    // Find the distance between now an the count down date
+    var distance = countDownDate - now;
+    
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    // Output the result in an element with id="demo"
+    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+    
+    // If the count down is over, write some text 
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "Spring Semester 2018";
+    }
+}, 1000);
+</script>  
+</article>
+</div>
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+<p>CSCI 120 Web Project<p>
+</div>
+    <div class="col-sm-8 text-left"> 
+      <h2>About Me</h2>
+	  <hr>
+	  <h3>Who Am I?</h3>
+	   <figure><img src="images/zodiac3.png" title="Me" alt="Me" height="150" width="150" /></figure>
+      <p style="text-align: justify;">I am Breonia Lee and I am a sophomore at Coastal Carolina University. I was born on May 08, 1998 in Columbia, South Carolina, where I have lived my whole life. Most people would describe me as soft spoken, sweet, and shy. I am pursuing a Bachelor of Science degree in Information Technology with a minor in Business Administration. My post-graduate plans are to move back home and become an administrator at one of the local schools or colleges.</p>
+      <hr>
+      <h3>What Do I Do?</h3>
+<table>
+<tr>
+<td>
+	   <dl>
+            <dt>Major?</dt>
+			<dd><br>Information Technology</dd>
+            <dt><br>Minor?</dt>
+			<dd><br>Business Administration</dd>
+			<dt><br>Clubs/Organizations?</dt>
+			<dd><br>Women of Color</dd>
+            <dt><br>Hobbies and Intrests?</dt>
+			<dd><br>Reading<br>Shopping<br>Writing<br><mark>Yoga</mark></dd>
+        </dl>
+</td>
+<td>
+		<figure>
+		 <img src="images/yoga.png" title="Hobbie" alt="Yoga" height="300" width="300" />
+		</figure>
+</td>
+</tr>
+</table>
+		<hr>
+		<h3>Currently Reading</h3>
+		<table>
+<tr>
+<td>
+   	    <figure>
+           <img src="images/Book.jpg" title="Book" alt="Me" height="350" width="300" />
+        </figure>
+</td>
+<td>
+<figcaption>
+<strong>Words Like Freedom</strong>
+</figcaption>
+<p><br>"There are words like <mark>Freedom</mark>
+<br>Sweet and wonderful to say.
+<br>On my heartstrings freedom sings
+<br>All day everyday.
+<br>
+<p>There are words like <mark>Liberty</mark>
+<br>That almost make me cry.
+<br>If you had known what I know
+<br>You could know why."
+<br>-Langston Hughes</P>
+</td>
+</tr>
+</table>
+ <hr>
+    </div>
+    <div class="col-sm-2 sidenav">
+	      <h3>GPA Calculator</h3>
+      <section id="calculator">
+  
+
+    <script>
+    window.webtrendsAsyncInit=function(){
+        var dcs=new Webtrends.dcs().init({
+            dcsid:"dcs37pv2c00000oun93vypyva_4k6d",
+            domain:"www.qsstats.com",
+            timezone:-8,
+            i18n:true,
+            onsitedoms:"htmlgoodies.com",
+            fpcdom:".htmlgoodies.com",
+            plugins:{
+       
+            }
+            }).track();
+    };
+    (function(){
+        var s=document.createElement("script"); s.async=true; s.src="/imageserver/common/v10/webtrends.min.js";    
+        var s2=document.getElementsByTagName("script")[0]; s2.parentNode.insertBefore(s,s2);
+    }());
+    </script>
+</head>
+<P>
+
+<CENTER>
+<FORM Name="GPACalcForm">
+<TABLE>
+<TH></th>
+<TH>Letter Grade</th>
+<TH>Credits Hours</th>
+<TR>
+<TD>Course 1</td>
+<TD><INPUT TYPE=TEXT SIZE=3 NAME="GR1" ALIGN=TOP MAXLENGTH=5></td>
+<TD><INPUT TYPE=TEXT SIZE=3 NAME="CR1" ALIGN=TOP MAXLENGTH=5></td>
+</tr>
+<TR>
+<TD>Course 2</td>
+<TD><INPUT TYPE=TEXT SIZE=3 NAME="GR2" ALIGN=TOP MAXLENGTH=5></td>
+<TD><INPUT TYPE=TEXT SIZE=3 NAME="CR2" ALIGN=TOP MAXLENGTH=5></td>
+</tr>
+<TR>
+<TD>Course 3</td>
+<TD><INPUT TYPE=TEXT SIZE=3 NAME="GR3" ALIGN=TOP MAXLENGTH=5></td>
+<TD><INPUT TYPE=TEXT SIZE=3 NAME="CR3" ALIGN=TOP MAXLENGTH=5></td>
+</tr>
+<TR>
+<TD>Course 4</td>
+<TD><INPUT TYPE=TEXT SIZE=3 NAME="GR4" ALIGN=TOP MAXLENGTH=5></td>
+<TD><INPUT TYPE=TEXT SIZE=3 NAME="CR4" ALIGN=TOP MAXLENGTH=5></td>
+</tr>
+<TR>
+<TD>Course 5</td>
+<TD><INPUT TYPE=TEXT SIZE=3 NAME="GR5" ALIGN=TOP MAXLENGTH=5></td>
+<TD><INPUT TYPE=TEXT SIZE=3 NAME="CR5" ALIGN=TOP MAXLENGTH=5></td>
+</tr>
+<TR>
+<TD>Course 6</td>
+<TD><INPUT TYPE=TEXT SIZE=3 NAME="GR6" ALIGN=TOP MAXLENGTH=5></td>
+<TD><INPUT TYPE=TEXT SIZE=3 NAME="CR6" ALIGN=TOP MAXLENGTH=5></td>
+</tr>
+<TR ALIGN=CENTER>
+<TD COLSPAN=3><INPUT TYPE="BUTTON" VALUE="Calculate" NAME="CalcButton" OnClick="gpacalc()"></td>
+</tr>
+</table>
+</form>
+<BR>
+<P>
+
+<P>
+</center>
+
+<BR>
+
+
+   <SCRIPT LANGUAGE="JavaScript">
+<!-- 
+function gpacalc()
+{
+//define valid grades and their values
+var gr = new Array(9); 
+var cr = new Array(9);
+var ingr = new Array(5);
+var incr = new Array(5);
+
+// define valid grades and their values
+var grcount = 10; 
+gr[0] = "a"; 
+cr[0] = 4; 
+gr[1] = "a-";
+cr[1] = 3.66;
+gr[2] = "b+";
+cr[2] = 3.33;
+gr[3] = "b";
+cr[3] = 3;
+gr[4] = "b-";
+cr[4] = 2.66;
+gr[5] = "c+";
+cr[5] = 2.33;
+gr[6] = "c";
+cr[6] = 2;
+gr[7] = "c-";
+cr[7] = 1.66;
+gr[8] = "d";
+cr[8] = 1;
+gr[9] = "f";
+cr[9] = 0;
+
+// retrieve user input
+ingr[0] = document.GPACalcForm.GR1.value;
+ingr[1] = document.GPACalcForm.GR2.value;
+ingr[2] = document.GPACalcForm.GR3.value;
+ingr[3] = document.GPACalcForm.GR4.value;
+ingr[4] = document.GPACalcForm.GR5.value;
+ingr[5] = document.GPACalcForm.GR6.value;
+incr[0] = document.GPACalcForm.CR1.value;
+incr[1] = document.GPACalcForm.CR2.value;
+incr[2] = document.GPACalcForm.CR3.value;
+incr[3] = document.GPACalcForm.CR4.value;
+incr[4] = document.GPACalcForm.CR5.value;
+incr[5] = document.GPACalcForm.CR6.value;
+
+// Calculate GPA
+var allgr =0;
+var allcr = 0;
+var gpa = 0;
+for (var x = 0; x < 5 + 1; x++)
+	{
+	if (ingr[x] == "") break;
+//	if (isNaN(parseInt(incr[x]))) alert("Error- You did not enter a numeric credits value for Class If the class is worth 0 credits then enter the number 0 in the field."); 
+	var validgrcheck = 0;
+	for (var xx = 0; xx < grcount; xx++)
+		{
+		if (ingr[x] == gr[xx])
+			{
+			allgr = allgr + (parseInt(incr[x],10) * cr[xx]);
+			allcr = allcr + parseInt(incr[x],10);
+			validgrcheck = 1;
+			break;
+			}
+		}
+	if (validgrcheck == 0)
+		{
+		alert("Error- Could not recognize the grade entered for Class " + eval(x + 1) + ". Please use standard college grades in the form of A A- B+ ...F.");
+		return 0;
+		}
+	}
+
+// this if-check prevents a divide by zero error
+if (allcr == 0)
+	{
+	alert("Error- You did not enter any credit values! GPA = N/A");
+	return 0;
+	}
+
+gpa = allgr / allcr;
+
+alert("GPA =  " + eval(gpa));
+
+return 0;
+}
+    
+</script>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <p></p>
+</footer>
+
+</body>
+</html>
